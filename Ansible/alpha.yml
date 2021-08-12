@@ -1,0 +1,22 @@
+---
+- name: Setup Webservers
+  hosts: webservers
+  remote_user: DVWA
+  become: True
+  roles:
+  - role: setup-webservers
+
+- name: Install ELK Server
+  hosts: elkservers
+  remote_user: ELK       
+  become: True
+  roles:
+  - role: install-elk
+
+- name: Install Filebeat &  Metricbeat  
+  hosts: webservers
+  remote_user: DVWA      
+  become: True
+  roles:
+  - role: install-filebeat
+  - role: install-metricbeat
