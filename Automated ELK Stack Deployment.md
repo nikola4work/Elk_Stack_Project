@@ -62,9 +62,6 @@ The playbook implements the following tasks:
 - Install Filebeat
 - Install Metricbeat
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-
-![ELK Docker PS](Images/elk_docker_ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
